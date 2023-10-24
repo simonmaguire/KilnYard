@@ -93,6 +93,7 @@ const login = async (req: Request, res: Response) => {
         .cookie("access_token", token, {
           httpOnly: true,
           secure: process.env.NODE_ENV !== "development",
+          sameSite: false,
         })
         .status(200)
         .json({
