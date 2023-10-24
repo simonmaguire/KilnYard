@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from "axios";
 
-const baseUrl: string = "http://localhost:3001";
+const baseUrl: string = import.meta.env.VITE_BACKEND_URL;
 
 interface IFilters {
   stage: string | undefined;
