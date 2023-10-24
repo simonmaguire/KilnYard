@@ -93,7 +93,7 @@ const login = async (req: Request, res: Response) => {
       return res
         .cookie("access_token", token, {
           httpOnly: true,
-          secure: false,
+          secure: process.env.NODE_ENV !== "development",
         })
         .status(200)
         .json({
@@ -108,6 +108,8 @@ const login = async (req: Request, res: Response) => {
 };
 
 const verifyUserToken = (req: Request, res: Response, next: NextFunction) => {
+  console.log(req.cookies);
+
   const accessToken = req.cookies.access_token;
   if (!accessToken) {
     return res.json({ message: "No Token Given", isLoggedIn: false });
