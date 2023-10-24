@@ -1,0 +1,118 @@
+.App {
+  text-align: center;
+  height: 100%;
+  font-family: "Lora SemiBold", serif;
+}
+
+@font-face {
+  font-family: "Lora SemiBold";
+  src: url("../../public/Lora-Regular.ttf");
+  src: url("../../public/Lora-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Ostrich Inline";
+  src: url("../../public//ostrich-sans-inline-regular.ttf");
+  src: url("../../public/ostrich-sans-inline-regular.ttf") format("truetype");
+}
+
+#banner {
+  height: 80px;
+  width: 100%;
+  position: sticky;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  background-color: #150f00;
+  z-index: 99;
+  padding: 15px;
+}
+.clickable:hover {
+  cursor: pointer;
+}
+
+#banner h1 {
+  font-size: 44px;
+  white-space: nowrap;
+  font-weight: 500;
+  font-family: "Ostrich Inline";
+  color: #edb526;
+  position: relative;
+  padding: 10px 5px 10px 10px;
+}
+
+#kiln-yard-with-logo {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+}
+
+.auth-buttons {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+}
+
+#profile-icon {
+  color: #f2dba0;
+}
+
+.auth-input {
+  width: 50%;
+  margin-left: 25%;
+}
+
+@media screen and (max-width: 400px) {
+  .login-input {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+#profile-nav-container {
+  position: absolute;
+  top: 30px;
+  right: 15px;
+}
+
+#profile-nav {
+  background-color: #25221a;
+  border: #d2cfc8 solid 1px;
+  border-radius: 4px;
+  list-style-type: none;
+  padding: 5px;
+}
+
+#profile-nav li {
+  color: #d2cfc8;
+  border-bottom: #d2cfc8 solid 1px;
+}
+
+#loading-spinner {
+  margin: 50px 0px 50px 0px;
+  --bs-spinner-width: 12rem;
+  --bs-spinner-height: 12rem;
+  --bs-spinner-border-width: 1rem;
+  border-color: #edb526;
+  border-right-color: transparent;
+}
+
+.error-page {
+  height: 30vh;
+  margin: 10vh 0vh 10vh 0vh;
+  width: 100%;
+  color: #beafa5;
+  font-size: 36px;
+}
+.error-page a {
+  color: #5a3030;
+}
+
+@media screen and (max-width: 480px) {
+  .text {
+    font-size: 16px;
+  }
+}

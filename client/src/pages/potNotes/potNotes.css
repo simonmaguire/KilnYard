@@ -1,0 +1,233 @@
+#form {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 12px;
+  color: #cccccc;
+}
+
+.form-section {
+  padding-bottom: 60px;
+}
+
+.section-header {
+  color: #beafa5;
+  border-bottom: #beafa5;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  text-align: left;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 15px;
+  flex-wrap: nowrap;
+  padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .half-width {
+    max-width: 50%;
+  }
+}
+
+h6 {
+  color: #5d3c18;
+}
+
+.input-field-container {
+  position: relative;
+}
+.form-label {
+  white-space: nowrap;
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23beafa5' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+.unit-label {
+  position: absolute;
+  bottom: 6px;
+  right: 10px;
+  font-style: italic;
+  color: #beafa5;
+}
+.max-width-200 {
+  max-width: 200px;
+}
+
+.form-label {
+  width: 100%;
+  text-align: left;
+  color: #e8eddf;
+  padding-right: 30px;
+  font-family: "Lora SemiBold";
+}
+
+.form-group {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.form-control,
+.form-control:focus {
+  background-color: rgba(0, 0, 0, 0);
+  color: #dddddd;
+}
+.form-group input {
+  cursor: text;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.input-group-text {
+  background-color: rgba(0, 0, 0, 0);
+  color: #dddddd;
+}
+
+.form-select,
+.form-select:focus {
+  background-color: rgba(25, 25, 25, 1);
+  color: #dddddd;
+}
+
+#result_notes {
+  height: fit-content;
+  scrollbar-color: blue;
+}
+
+.error-text {
+  color: #f04545;
+  padding-top: 5px;
+  font-style: italic;
+  font-family: "Lora SemiBold";
+  font-size: 16px;
+}
+
+.error-text::first-letter {
+  text-transform: capitalize;
+}
+
+input::-webkit-calendar-picker-indicator {
+  filter: invert(0.8);
+}
+
+input::-moz-calendar-pick {
+  filter: invert(0.8);
+}
+
+.image-group-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.img-group {
+  border: solid 1px rgb(206, 212, 218);
+  border-radius: 0.375rem;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 180px;
+}
+
+.image-card {
+  border-radius: 4px;
+  position: relative;
+  width: auto;
+  height: fit-content;
+  margin: 15px;
+}
+
+.input-image {
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+  background-color: #0d060f;
+}
+
+.image-card img {
+  border-radius: 4px;
+}
+
+.image-card .delete-image-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+#fileInput {
+  display: none;
+}
+#icon {
+  width: 100px;
+  cursor: pointer;
+}
+
+.image-row {
+  display: flex;
+  flex-direction: row;
+  justify-items: start;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.add-file-center {
+  color: #beafa5;
+  cursor: pointer;
+}
+.add-file-bottom {
+  color: #beafa5;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 69;
+}
+.hidden {
+  display: none;
+}
+
+#button-bar {
+  position: fixed;
+  bottom: 0%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #150f00;
+  border-style: solid;
+  border-color: #edb526;
+  border-width: 1px 1px 0px 1px;
+  padding: 10px;
+  border-radius: 10px 10px 0px 0px;
+  z-index: 79;
+}
+
+.btn {
+  margin: 0px 10px 0px 10px;
+  --bs-btn-bg: #1c1607;
+  --bs-btn-border-color: #f0bf46;
+  --bs-btn-hover-color: #f2dba0;
+  --bs-btn-hover-bg: #25221a;
+  --bs-btn-hover-border-color: #f2dba0;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-disabled-color: #beafa5;
+  --bs-btn-disabled-bg: #230000;
+  --bs-btn-disabled-border-color: #0d060f;
+  --bs-btn-color: #f0bf46;
+}

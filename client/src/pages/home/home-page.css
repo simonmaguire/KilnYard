@@ -1,0 +1,93 @@
+#homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#home-upper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+h1 {
+  color: #edb526;
+  font-family: "Ostrich Inline";
+  font-weight: 400px;
+  font-size: 192px;
+  line-height: 0.5;
+  padding-bottom: 55px;
+}
+
+p {
+  font-style: italic;
+  color: #f2ebd8;
+  font-size: 20px;
+  font-weight: 100;
+  padding-top: 10px;
+}
+
+button {
+  background-color: #edb526;
+  font-family: "Lora SemiBold";
+  border-radius: 24px;
+  border-width: 0px;
+  font-weight: 200;
+}
+
+#main-vases {
+  width: 40%;
+  position: absolute;
+  left: 30%;
+  bottom: 0px;
+}
+
+#home-btns {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#home-pottery-btn {
+  width: 300px;
+}
+
+#home-btns button {
+  width: fit-content;
+  padding: 0px 25px 0px 25px;
+  margin: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  #main-vases {
+    left: 10%;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  h1 {
+    font-size: 144px;
+    line-height: 0.4;
+  }
+  p {
+    font-size: 16px;
+  }
+  #home-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  h1 {
+    font-size: 124px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
