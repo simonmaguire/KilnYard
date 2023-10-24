@@ -88,7 +88,6 @@ const login = async (req: Request, res: Response) => {
     { expiresIn: "12h" },
     (err: any, token: any) => {
       if (err) return res.json({ message: err });
-      console.log(token);
 
       return res
         .cookie("access_token", token, {

@@ -131,7 +131,6 @@ const createPot = async (req: Request, res: Response) => {
 
     res.status(201).json({ message: "Pot added", pot: newPot });
   } catch (error) {
-    console.log("No way");
     throw error;
   }
 };
