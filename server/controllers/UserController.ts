@@ -48,17 +48,21 @@ const verifyLoginInfo = async (
 
     UserSchema.findOne({ username: user.username }).then((dbUser) => {
       if (!dbUser) {
-        return res.json({
-          message: "Invalid Username",
-        });
+        return res
+          .json({
+            message: "Invalid Username",
+          })
+          .send();
       }
       bcrypt
         .compare(user.password, dbUser.password)
         .then((isCorrect: boolean) => {
           if (!isCorrect) {
-            return res.json({
-              message: "Invalid Username or Password",
-            });
+            return res
+              .json({
+                message: "Invalid Username or Password",
+              })
+              .send();
           } else {
             req.body.userId = dbUser._id;
             req.body.username = dbUser.username;
@@ -106,20 +110,13 @@ const login = async (req: Request, res: Response) => {
 const verifyUserToken = (req: Request, res: Response, next: NextFunction) => {
   const accessToken = req.cookies.access_token;
   if (!accessToken) {
-    return (
-      res
-        // .status(401)
-        .json({ message: "No Token Given", isLoggedIn: false })
-        .send()
-    );
+    return res.json({ message: "No Token Given", isLoggedIn: false });
   }
   if (!process.env.JWT_SECRET) {
-    return (
-      res
-        // .status(401)
-        .json({ message: "environment incorrectly set up", isLoggedIn: false })
-        .send()
-    );
+    return res.json({
+      message: "environment incorrectly set up",
+      isLoggedIn: false,
+    });
   }
 
   try {
@@ -128,13 +125,10 @@ const verifyUserToken = (req: Request, res: Response, next: NextFunction) => {
       process.env.JWT_SECRET,
       (err: any, decoded: any) => {
         if (err) {
-          return res
-            .status(401)
-            .json({
-              isLoggedIn: false,
-              message: "Failed To Authenticate",
-            })
-            .send();
+          return res.status(401).json({
+            isLoggedIn: false,
+            message: "Failed To Authenticate",
+          });
         }
         req.body.userId = decoded.id;
         req.body.username = decoded.username;
