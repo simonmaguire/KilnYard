@@ -43,6 +43,7 @@ button {
   position: absolute;
   left: 30%;
   bottom: 0px;
+  z-index: -1;
 }
 
 #home-btns {

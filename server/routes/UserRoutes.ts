@@ -15,10 +15,17 @@ userRouter.post("/register", registerUser, login);
 userRouter.post("/login", verifyLoginInfo, login);
 
 userRouter.get("/logout", verifyUserToken, (req: Request, res: Response) => {
-  return res.clearCookie("access_token").status(200).json({
-    message:
-      "Success                                                                                                                                                                                                                                                                                                                           ully logged out 😏 🍀",
-  });
+  return res
+    .clearCookie("access_token", {
+      httpOnly: true,
+      secure: true,
+      sameSite: "none",
+    })
+    .status(200)
+    .json({
+      message:
+        "Success                                                                                                                                                                                                                                                                                                                           ully logged out 😏 🍀",
+    });
 });
 
 userRouter.get(
