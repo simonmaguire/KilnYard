@@ -110,8 +110,6 @@ const login = async (req: Request, res: Response) => {
 };
 
 const verifyUserToken = (req: Request, res: Response, next: NextFunction) => {
-  console.log(req.cookies);
-
   const accessToken = req.cookies.access_token;
   if (!accessToken) {
     return res.json({ message: "No Token Given", isLoggedIn: false });
