@@ -63,16 +63,13 @@ const Main = () => {
 
   const fetchPots = (): void => {
     setLoadingPots(true);
-    getPots(filters, page, sortedBy)
-      .then(({ data: { pots, potCountFiltered } }) => {
+    getPots(filters, page, sortedBy).then(
+      ({ data: { pots, potCountFiltered } }) => {
         setPots(pots);
         setPotCount(potCountFiltered);
         setLoadingPots(false);
-      })
-      .catch(() => {
-        //this navigate is a pretty wild assumption and not necessarily where I want to check for login
-        navigate("/login", { relative: "route" });
-      });
+      }
+    );
   };
 
   const handleDeletePot = (_id: string): void => {
