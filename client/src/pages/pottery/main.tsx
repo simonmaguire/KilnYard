@@ -23,7 +23,7 @@ interface IGridFilters {
 }
 
 const Main = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   // const [queryParameters, setQueryParameters] = useSearchParams();
 
   const queryParameters = new URLSearchParams(window.location.search);
