@@ -73,7 +73,7 @@ const ImageRow = ({ section, imageURLs, deleteImage }: TImageRowProps) => {
 const ImageGroup = ({ addImage, deleteImage, images, section }: Tprops) => {
   const cld = new Cloudinary({
     cloud: {
-      cloudName: import.meta.env.REACT_APP_CLOUDINARY_CLOUD_NAME || "",
+      cloudName: import.meta.env.VITE_APP_CLOUDINARY_CLOUD_NAME || "",
     },
   });
 
