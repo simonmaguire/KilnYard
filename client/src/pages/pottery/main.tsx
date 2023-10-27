@@ -4,7 +4,7 @@ import PotteryCardGrid from "./PotteryCardGrid";
 import "./pottery.css";
 import Options from "./options";
 import { getPots, deletePot } from "../../API";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { GridFiltersPopop } from "./GridFilters";
 import { Pagination } from "./pagination";
 import { SortDropDown } from "./SortDropDown";
